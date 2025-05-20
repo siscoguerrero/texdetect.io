@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de Texto IA | Análisis Avanzado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth-styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-robot"></i> TextDetect by Dirneet
+        </div>
+        <div class="subtitle">Análisis avanzado de texto IA</div>
+        <div class="language-selector">
+            <button id="lang-es" class="lang-btn active">ES</button>
+            <button id="lang-en" class="lang-btn">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Detector de Texto Generado por IA</h1>
+            <p class="description">Análisis avanzado con comparación de múltiples plataformas: Smodi, Turnitin, GPTZero, Copyleaks y Sampling</p>
+            
+            <div class="input-section">
+                <h2>¿Este texto fue escrito por IA o por un Humano?</h2>
+                
+                <div class="source-buttons">
+                    <button id="source-chatgpt" class="source-btn">
+                        <i class="fas fa-robot"></i> ChatGPT
+                    </button>
+                    <button id="source-human" class="source-btn">
+                        <i class="fas fa-user"></i> Humano
+                    </button>
+                    <button id="source-mixed" class="source-btn">
+                        <i class="fas fa-user-robot"></i> IA + Humano
+                    </button>
+                </div>
+                
+                <div class="text-input-container">
+                    <textarea id="text-input" placeholder="Pega tu texto aquí para analizarlo (mínimo 100 caracteres)"></textarea>
+                    <div class="char-count">0/50000 caracteres</div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="analyze-btn" class="btn btn-primary">
+                        <i class="fas fa-search"></i> Analizar texto
+                    </button>
+                    <button id="clear-btn" class="btn btn-secondary">
+                        <i class="fas fa-trash"></i> Borrar texto
+                    </button>
+                </div>
+            </div>
+            
+            <div id="loading-section" class="loading-section">
+                <div class="loading-animation">
+                    <div class="clock">
+                        <div class="hour-hand"></div>
+                        <div class="minute-hand"></div>
+                        <div class="second-hand"></div>
+                        <div class="center-circle"></div>
+                    </div>
+                </div>
+                <div class="loading-text">Analizando texto...</div>
+                <div class="loading-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">0%</div>
+                </div>
+            </div>
+            
+            <div id="notification" class="notification"></div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>Desarrollado para entornos académicos. Utiliza algoritmos avanzados de análisis de texto.</p>
+            <p>&copy; 2025 TextDetect by dirneet</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/metrics.js"></script>
+    <script src="js/humanizer.js"></script>
+    <script src="js/humanizer-ui.js"></script>
+    <script src="js/google-auth.js"></script>
+    <script src="js/studocu-integration.js"></script>
+    <script src="js/analyzer.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
