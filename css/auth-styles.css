@@ -1,0 +1,236 @@
+/* Estilos adicionales para la integración con Google y Studocu */
+
+/* Contenedor de autenticación */
+.auth-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    right: 120px;
+}
+
+/* Contenedor de perfil */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Imagen de perfil */
+.profile-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+}
+
+/* Nombre de perfil */
+.profile-name {
+    font-size: 14px;
+    color: white;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Botón de cierre de sesión */
+#sign-out-button {
+    font-size: 12px;
+    padding: 3px 8px;
+}
+
+/* Botón de comparación con Studocu */
+#studocu-compare-button {
+    display: none;
+    width: 100%;
+    margin-top: 15px;
+    background-color: #4285f4;
+    border-color: #4285f4;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#studocu-compare-button:hover {
+    background-color: #3367d6;
+    border-color: #3367d6;
+}
+
+/* Sección de comparación con Studocu */
+.comparison-section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.comparison-section .section-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comparison-section .section-description {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+/* Tarjetas de resultados de Studocu */
+.studocu-results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.studocu-result-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.studocu-result-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.result-header {
+    margin-bottom: 15px;
+}
+
+.result-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.result-title a {
+    color: #4285f4;
+    text-decoration: none;
+}
+
+.result-title a:hover {
+    text-decoration: underline;
+}
+
+.result-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Barra de similitud */
+.result-similarity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.similarity-label {
+    width: 80px;
+    font-weight: bold;
+}
+
+.similarity-bar {
+    flex-grow: 1;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 10px;
+}
+
+.similarity-fill {
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+}
+
+.similarity-percentage {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Fragmentos coincidentes */
+.matching-fragments h5 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.fragments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.fragment-pair {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.fragment {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.fragment.original {
+    background-color: #e8f0fe;
+    border-left: 3px solid #4285f4;
+}
+
+.fragment.matched {
+    background-color: #fef8e0;
+    border-left: 3px solid #fbbc05;
+}
+
+.fragment-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.fragment-content {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Nota sobre autenticación */
+.studocu-note {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .auth-container {
+        position: static;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .fragment-pair {
+        flex-direction: column;
+    }
+    
+    .result-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
